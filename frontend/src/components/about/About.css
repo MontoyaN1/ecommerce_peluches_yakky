@@ -1,0 +1,347 @@
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8f5f0;
+}
+
+.about-main {
+  flex: 1;
+  width: 100%;
+}
+
+.about-hero {
+  background: 
+    linear-gradient(rgba(44, 26, 29, 0.9), rgba(44, 26, 29, 0.85)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="about" width="15" height="15" patternUnits="userSpaceOnUse"><path d="M0 0h15v15H0z" fill="%232c1a1d"/><circle cx="7.5" cy="7.5" r="2" fill="%238b5a2b" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23about)"/></svg>');
+  color: #e8d5b7;
+  padding: 5rem 0;
+  text-align: center;
+  border-bottom: 1px solid #8b5a2b;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  color: #d4a76a;
+}
+
+.about-hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Story Section */
+.story-section {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.story-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.story-text h2 {
+  color: #2c1a1d;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+.story-text p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+blockquote {
+  border-left: 4px solid #8b5a2b;
+  padding-left: 2rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #2c1a1d;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.story-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-artisan {
+  font-size: 5rem;
+  opacity: 0.8;
+}
+
+/* Values Section */
+.values-section {
+  padding: 5rem 0;
+  background: #f8f5f0;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.values-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c1a1d;
+  margin-bottom: 3rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+}
+
+.value-card {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(44, 26, 29, 0.1);
+  border-color: #8b5a2b;
+}
+
+.value-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.value-card h3 {
+  color: #2c1a1d;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Process Section */
+.process-section {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.process-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c1a1d;
+  margin-bottom: 3rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+}
+
+.process-step {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.step-number {
+  font-size: 3rem;
+  color: #8b5a2b;
+  font-family: 'Georgia', serif;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+  font-weight: bold;
+}
+
+.process-step h3 {
+  color: #2c1a1d;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+.process-step p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Team Section */
+.team-section {
+  padding: 5rem 0;
+  background: #f8f5f0;
+  border-top: 1px solid #e8e8e8;
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c1a1d;
+  margin-bottom: 3rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+}
+
+.team-member {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(44, 26, 29, 0.1);
+  border-color: #8b5a2b;
+}
+
+.member-photo {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-member h3 {
+  color: #2c1a1d;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+.member-role {
+  color: #8b5a2b;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.member-bio {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* CTA Section */
+.about-cta {
+  padding: 5rem 0;
+  background: 
+    linear-gradient(rgba(44, 26, 29, 0.95), rgba(44, 26, 29, 0.9)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="cta" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="%232c1a1d"/><path d="M0 0L20 20M20 0L0 20" stroke="%238b5a2b" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23cta)"/></svg>');
+  color: #e8d5b7;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  color: #d4a76a;
+}
+
+.about-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .story-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .story-text h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero,
+  .story-section,
+  .values-section,
+  .process-section,
+  .team-section,
+  .about-cta {
+    padding: 3rem 0;
+  }
+  
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .values-grid,
+  .process-steps,
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 250px;
+  }
+}

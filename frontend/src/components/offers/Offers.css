@@ -1,0 +1,179 @@
+.offers-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8f5f0;
+}
+
+.offers-main {
+  flex: 1;
+  width: 100%;
+}
+
+.offers-hero {
+  background: 
+    linear-gradient(rgba(139, 90, 43, 0.9), rgba(44, 26, 29, 0.9)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="sale" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="%238b5a2b"/><circle cx="10" cy="10" r="8" fill="%23d4a76a" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23sale)"/></svg>');
+  color: #e8d5b7;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #8b5a2b;
+}
+
+.offer-badge {
+  display: inline-block;
+  background: #d4a76a;
+  color: #2c1a1d;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.offers-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  color: #fff;
+}
+
+.offers-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.featured-offer {
+  background: linear-gradient(135deg, #2c1a1d 0%, #8b5a2b 100%);
+  color: #e8d5b7;
+  padding: 3rem;
+  border-radius: 8px;
+  margin: 3rem 0;
+  text-align: center;
+  border: 2px solid #d4a76a;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-offer::before {
+  content: '⚡ OFERTA ESPECIAL ⚡';
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  background: #d4a76a;
+  color: #2c1a1d;
+  padding: 0.3rem 2rem;
+  transform: rotate(45deg);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.featured-offer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #d4a76a;
+}
+
+.featured-offer h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.featured-offer p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.offers-section {
+  padding: 3rem 0;
+}
+
+.offers-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c1a1d;
+  margin-bottom: 3rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  position: relative;
+}
+
+.offers-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: #8b5a2b;
+}
+
+/* Estilos especiales para productos en oferta */
+.product-card.on-sale .product-price {
+  color: #d4a76a;
+  font-size: 1.5rem;
+}
+
+.product-card.on-sale .original-price {
+  color: #666;
+  text-decoration: line-through;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #d4a76a;
+  color: #2c1a1d;
+  padding: 0.3rem 0.8rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .offers-hero {
+    padding: 3rem 0;
+  }
+  
+  .offers-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .featured-offer {
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .featured-offer h3 {
+    font-size: 1.8rem;
+  }
+  
+  .featured-offer::before {
+    font-size: 0.7rem;
+    right: -35px;
+  }
+}

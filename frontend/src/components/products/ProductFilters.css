@@ -1,0 +1,123 @@
+.product-filters {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 10px rgba(44, 26, 29, 0.05);
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.filters-header h3 {
+  color: #2c1a1d;
+  font-size: 1.3rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+.clear-filters-btn {
+  background: transparent;
+  border: 1px solid #8b5a2b;
+  color: #8b5a2b;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.clear-filters-btn:hover {
+  background: #8b5a2b;
+  color: #fff;
+}
+
+.filter-group {
+  margin-bottom: 2.5rem;
+}
+
+.filter-group h4 {
+  color: #2c1a1d;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #2c1a1d;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.filter-option:hover {
+  color: #8b5a2b;
+}
+
+.filter-option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 1px solid #8b5a2b;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.filter-option input:checked ~ .checkmark {
+  background-color: #8b5a2b;
+  border-color: #8b5a2b;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.filter-option input:checked ~ .checkmark:after {
+  display: block;
+}
+
+@media (max-width: 968px) {
+  .product-filters {
+    padding: 1.5rem;
+  }
+}

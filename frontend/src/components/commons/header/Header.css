@@ -1,0 +1,156 @@
+.header {
+  background: #2c1a1d; /* Marrón oscuro elegante */
+  border-bottom: 1px solid #8b5a2b; /* Línea sutil de madera */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo h1 {
+  color: #e8d5b7; /* Beige elegante */
+  font-size: 1.8rem;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #e8d5b7;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.nav-list a:hover {
+  color: #d4a76a; /* Dorado suave */
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #d4a76a;
+  transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-btn,
+.cart-btn,
+.user-btn,
+.menu-toggle {
+  background: transparent;
+  border: 1px solid #8b5a2b;
+  border-radius: 4px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8d5b7;
+}
+
+.search-btn:hover,
+.cart-btn:hover,
+.user-btn:hover,
+.menu-toggle:hover {
+  background: rgba(139, 90, 43, 0.2);
+  border-color: #d4a76a;
+}
+
+.cart-btn {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #8b5a2b;
+  color: #e8d5b7;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e8d5b7;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #2c1a1d;
+    border-top: 1px solid #8b5a2b;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .header .container {
+    padding: 1rem;
+  }
+}

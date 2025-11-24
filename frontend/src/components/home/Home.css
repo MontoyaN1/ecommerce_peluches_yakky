@@ -1,0 +1,101 @@
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8f5f0; /* Fondo beige muy claro */
+}
+
+.home-main {
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.featured-products {
+  padding: 5rem 0;
+  background: #fff;
+  width: 100%;
+}
+
+.featured-products h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c1a1d;
+  margin-bottom: 3rem;
+  position: relative;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+.featured-products h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: #8b5a2b;
+}
+
+.promo-banner {
+  background: 
+    linear-gradient(rgba(44, 26, 29, 0.95), rgba(44, 26, 29, 0.9)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="%232c1a1d"/><path d="M0 0h100v100H0z" fill="none" stroke="%238b5a2b" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  color: #e8d5b7;
+  padding: 4rem 0;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #8b5a2b;
+  border-bottom: 1px solid #8b5a2b;
+}
+
+.promo-banner h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  color: #d4a76a;
+}
+
+.promo-banner p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Asegurar que no haya overflow */
+body {
+  overflow-x: hidden;
+  background: #f8f5f0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .featured-products {
+    padding: 3rem 0;
+  }
+  
+  .featured-products h2 {
+    font-size: 1.8rem;
+  }
+  
+  .promo-banner h3 {
+    font-size: 1.5rem;
+  }
+  
+  .promo-banner {
+    padding: 3rem 0;
+  }
+}
