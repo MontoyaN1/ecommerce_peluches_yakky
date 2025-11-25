@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Header from '../commons/header/Header';
 import Footer from '../commons/footer/Footer';
+import "bootstrap-icons/font/bootstrap-icons.css";
 import './Contact.css';
+
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -69,7 +71,7 @@ const Contact = () => {
                                     <div className="contact-icon">📞</div>
                                     <div className="contact-text">
                                         <h3>Teléfono</h3>
-                                        <p>+57 (7) 123 4567</p>
+                                        <p>+57 302 8116748</p>
                                     </div>
                                 </div>
 
@@ -77,7 +79,7 @@ const Contact = () => {
                                     <div className="contact-icon">✉️</div>
                                     <div className="contact-text">
                                         <h3>Email</h3>
-                                        <p>info@peluchesartesanales.com</p>
+                                        <p>yakkypeluches@gmail.com</p>
                                     </div>
                                 </div>
 
@@ -93,21 +95,9 @@ const Contact = () => {
                             <div className="social-contact">
                                 <h3>Síguenos en Redes Sociales</h3>
                                 <div className="social-links-grid">
-                                    <a href="#" className="social-link-item" title="Facebook">
-                                        <span className="social-emoji">📘</span>
-                                        <span className="social-platform">Facebook</span>
-                                    </a>
-                                    <a href="#" className="social-link-item" title="Instagram">
-                                        <span className="social-emoji">📷</span>
-                                        <span className="social-platform">Instagram</span>
-                                    </a>
-                                    <a href="#" className="social-link-item" title="Twitter">
-                                        <span className="social-emoji">🐦</span>
-                                        <span className="social-platform">Twitter</span>
-                                    </a>
-                                    <a href="#" className="social-link-item" title="TikTok">
-                                        <span className="social-emoji">🎵</span>
-                                        <span className="social-platform">TikTok</span>
+                                    <a href="https://wa.me/573028116748" className="social-link-item">
+                                        <i className="bi bi-whatsapp"></i>
+                                        <span className="social-platform">WhatsApp</span>
                                     </a>
                                 </div>
                             </div>
@@ -221,6 +211,8 @@ const Contact = () => {
                                     </button>
                                 </form>
                             </div>
+
+                            
                         </div>
                     </div>
                 </div>

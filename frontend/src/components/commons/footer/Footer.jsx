@@ -1,21 +1,21 @@
 import './Footer.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          
+
           {/* Sección información */}
           <div className="footer-section">
-            <h3>🦄 Peluches Mágicos</h3>
-            <p>Los peluches más suaves y adorables para todos los gustos. 
-               Envíos a todo el país.</p>
-            <div className="social-links">
-              <a href="#">📘</a>
-              <a href="#">📷</a>
-              <a href="#">🐦</a>
-            </div>
+            <h3>Peluches Yakky</h3>
+            <p>Peluches artesanales con varios acabos.</p>
+            <a href="https://wa.me/573028116748" className="social-link-item">
+              <i className="bi bi-whatsapp"></i>
+              <span className="social-platform">WhatsApp</span>
+            </a>
           </div>
 
           {/* Enlaces rápidos */}
@@ -25,7 +25,7 @@ const Footer = () => {
               <li><a href="/">Inicio</a></li>
               <li><a href="/productos">Todos los Productos</a></li>
               <li><a href="/ofertas">Ofertas Especiales</a></li>
-              <li><a href="/nuevos">Nuevos Lanzamientos</a></li>
+              <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
             </ul>
           </div>
 
@@ -33,10 +33,7 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Categorías</h4>
             <ul>
-              <li><a href="/categoria/animales">Animales</a></li>
-              <li><a href="/categoria/fantasia">Fantasía</a></li>
-              <li><a href="/categoria/personajes">Personajes</a></li>
-              <li><a href="/categoria/gigantes">Peluches Gigantes</a></li>
+              <li><a href="/productos">Navidad</a></li>
             </ul>
           </div>
 
@@ -44,16 +41,16 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contacto</h4>
             <ul>
-              <li>📞 +1 234 567 890</li>
-              <li>✉️ info@peluchesmagicos.com</li>
-              <li>📍 Dirección: Calle Peluche 123</li>
+              <li>📞 +57 302 8116748</li>
+              <li>✉️ yakkypeluches@gmail.com</li>
+              <li>📍 Dirección: Calle 204c #38a-58</li>
             </ul>
           </div>
 
         </div>
-        
+
         <div className="footer-bottom">
-          <p>&copy; 2024 Peluches Mágicos. Todos los derechos reservados.</p>
+          <p>&copy; 2025 Peluches Yakky. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

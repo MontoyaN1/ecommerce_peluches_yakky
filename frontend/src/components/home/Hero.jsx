@@ -6,16 +6,16 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <h1>Encuentra tu Peluche Perfecto</h1>
-          <p>Descubre nuestra colección de peluches suaves, adorables y llenos de amor. 
-             Perfectos para regalar o consentirte.</p>
+          <p>Descubre nuestra colección de peluches suaves, adorables y llenos de amor.
+            Perfectos para regalar o consentirte.</p>
           <div className="hero-buttons">
-            <button className="btn-primary">Ver Colección</button>
-            <button className="btn-secondary">Ofertas Especiales</button>
+            <a href="/productos"><button className="btn-primary" >Ver Colección</button></a>
+            <a href="/ofertas"><button className="btn-secondary">Ofertas Especiales</button></a>
           </div>
         </div>
         <div className="hero-image">
-          {/* Aquí iría una imagen de peluches */}
-          <div className="placeholder-image">🦁🐻🐰🦊</div>
+          <img src="/reno_decoracion.png" alt="Peluches Yakky" className="placeholder-image" />
+
         </div>
       </div>
     </section>

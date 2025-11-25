@@ -4,6 +4,7 @@ import Footer from '../commons/footer/Footer';
 import ProductGrid from './ProductGrid';
 import ProductFilters from './ProductFilters';
 import './Product.css';
+import { products } from '../../data/ProductData';
 
 const Products = () => {
   const [filters, setFilters] = useState({
@@ -15,7 +16,7 @@ const Products = () => {
   return (
     <div className="products-page">
       <Header />
-      
+
       <main className="products-main">
         {/* Hero de productos */}
         <section className="products-hero">
@@ -36,7 +37,7 @@ const Products = () => {
             <section className="products-content">
               <div className="products-header">
                 <h2>Todos los Productos</h2>
-                <div className="products-count">12 productos</div>
+                <div className="products-count">{products.length} productos</div>
               </div>
               <ProductGrid filters={filters} />
             </section>

@@ -31,6 +31,7 @@
   padding: 1rem;
   border-bottom: 1px solid #e8e8e8;
   position: relative;
+  overflow: hidden;
 }
 
 .product-image::after {
@@ -42,6 +43,36 @@
   bottom: 0;
   background: linear-gradient(135deg, rgba(139, 90, 43, 0.05) 0%, transparent 100%);
   pointer-events: none;
+}
+
+.placeholder-image {
+  width: 100%; /* Ocupa el ancho completo del contenedor */
+  height: 100%; /* Ocupa la altura completa del contenedor */
+  object-fit: cover; /* ¡IMPORTANTE: recorta la imagen para que encaje */
+  object-position: center; /* Centra la imagen */
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para las imágenes */
+.placeholder-image:hover {
+  transform: scale(1.05);
+}
+
+.product-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(139, 90, 43, 0.05) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Para imágenes que quieras contener en vez de recortar */
+.placeholder-image.contain {
+  object-fit: contain; /* Muestra la imagen completa sin recortar */
+  background: #fff; /* Fondo blanco para imágenes con transparencia */
 }
 
 .product-info {

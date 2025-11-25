@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="about-page">
       <Header />
-      
+
       <main className="about-main">
         {/* Hero Section */}
         <section className="about-hero">
@@ -24,18 +24,18 @@ const About = () => {
               <div className="story-text">
                 <h2>El Origen de Nuestra Pasión</h2>
                 <p>
-                  En el corazón de la tradición artesanal, nace Peluches Mágicos como un 
-                  tributo a la belleza de lo hecho a mano. Desde 2015, hemos dedicado 
+                  En el corazón de la tradición artesanal, nace Peluches Mágicos como un
+                  tributo a la belleza de lo hecho a mano. Desde 2015, hemos dedicado
                   nuestras manos y corazón a crear peluches únicos que cuentan historias.
                 </p>
                 <p>
-                  Cada pieza es el resultado de horas de dedicación, utilizando maderas 
-                  seleccionadas de bosques sostenibles y tejidos naturales que respetan 
-                  el medio ambiente. Creemos en la belleza de la imperfección, en ese 
+                  Cada pieza es el resultado de horas de dedicación, utilizando maderas
+                  seleccionadas de bosques sostenibles y tejidos naturales que respetan
+                  el medio ambiente. Creemos en la belleza de la imperfección, en ese
                   detalle único que hace especial a cada creación.
                 </p>
                 <blockquote>
-                  "No creamos simples peluches, creamos compañeros para la vida, 
+                  "No creamos simples peluches, creamos compañeros para la vida,
                   testigos de momentos especiales y guardianes de sueños"
                 </blockquote>
               </div>
@@ -55,7 +55,7 @@ const About = () => {
                 <div className="value-icon">🌱</div>
                 <h3>Sostenibilidad</h3>
                 <p>
-                  Utilizamos materiales naturales y procesos que respetan 
+                  Utilizamos materiales naturales y procesos que respetan
                   el medio ambiente. Cada peluche es eco-amigable.
                 </p>
               </div>
@@ -63,7 +63,7 @@ const About = () => {
                 <div className="value-icon">👐</div>
                 <h3>Artesanía</h3>
                 <p>
-                  Técnicas tradicionales combinadas con diseño contemporáneo. 
+                  Técnicas tradicionales combinadas con diseño contemporáneo.
                   Cada pieza es 100% hecha a mano.
                 </p>
               </div>
@@ -71,7 +71,7 @@ const About = () => {
                 <div className="value-icon">💝</div>
                 <h3>Calidad</h3>
                 <p>
-                  Materiales premium y atención al detalle. Creaciones 
+                  Materiales premium y atención al detalle. Creaciones
                   diseñadas para durar generaciones.
                 </p>
               </div>
@@ -79,7 +79,7 @@ const About = () => {
                 <div className="value-icon">🤝</div>
                 <h3>Comunidad</h3>
                 <p>
-                  Apoyamos a artesanos locales y promovemos el comercio 
+                  Apoyamos a artesanos locales y promovemos el comercio
                   justo en cada etapa del proceso.
                 </p>
               </div>
@@ -96,7 +96,7 @@ const About = () => {
                 <div className="step-number">01</div>
                 <h3>Selección de Materiales</h3>
                 <p>
-                  Elegimos cuidadosamente maderas de cerezo, nogal y roble, 
+                  Elegimos cuidadosamente maderas de cerezo, nogal y roble,
                   junto con tejidos orgánicos de la más alta calidad.
                 </p>
               </div>
@@ -104,7 +104,7 @@ const About = () => {
                 <div className="step-number">02</div>
                 <h3>Diseño y Planificación</h3>
                 <p>
-                  Cada peluche comienza con bocetos detallados, considerando 
+                  Cada peluche comienza con bocetos detallados, considerando
                   la personalidad única que queremos transmitir.
                 </p>
               </div>
@@ -112,7 +112,7 @@ const About = () => {
                 <div className="step-number">03</div>
                 <h3>Elaboración Artesanal</h3>
                 <p>
-                  Nuestros artesanos dan vida a cada pieza mediante técnicas 
+                  Nuestros artesanos dan vida a cada pieza mediante técnicas
                   tradicionales de tallado y costura.
                 </p>
               </div>
@@ -120,7 +120,7 @@ const About = () => {
                 <div className="step-number">04</div>
                 <h3>Acabados y Detalles</h3>
                 <p>
-                  Aplicamos acabados naturales y añadimos esos detalles 
+                  Aplicamos acabados naturales y añadimos esos detalles
                   especiales que hacen única cada creación.
                 </p>
               </div>
@@ -135,31 +135,17 @@ const About = () => {
             <div className="team-grid">
               <div className="team-member">
                 <div className="member-photo">👩‍🎨</div>
-                <h3>Elena Martínez</h3>
+                <h3>Martha Valencia</h3>
                 <p className="member-role">Maestra Artesana</p>
                 <p className="member-bio">
-                  Con 15 años de experiencia en tallado en madera, Elena 
-                  da vida a las formas más complejas con precisión y amor.
+                  Actual administradora y artesana de Peluches Yakky, 
+                  con años en experiencia en trabajos en peluche, madera
+                   y artesanías en general. Es la mente maestra destras
+                   de cada artesanía destacando su creatividad y ingenió
+                   único.
                 </p>
               </div>
-              <div className="team-member">
-                <div className="member-photo">👨‍🎨</div>
-                <h3>Carlos Rodríguez</h3>
-                <p className="member-role">Especialista en Textiles</p>
-                <p className="member-bio">
-                  Carlos domina técnicas ancestrales de costura y selecciona 
-                  los mejores tejidos naturales para cada proyecto.
-                </p>
-              </div>
-              <div className="team-member">
-                <div className="member-photo">👩‍💼</div>
-                <h3>Ana López</h3>
-                <p className="member-role">Diseñadora Principal</p>
-                <p className="member-bio">
-                  Ana combina tradición y modernidad en diseños que 
-                  emocionan y conectan con las historias de nuestros clientes.
-                </p>
-              </div>
+
             </div>
           </div>
         </section>

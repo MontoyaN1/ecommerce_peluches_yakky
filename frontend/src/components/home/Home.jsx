@@ -25,7 +25,7 @@ const Home = () => {
         {/* Banner promocional */}
         <section className="promo-banner">
           <div className="container">
-            <h3>🎁 Envío Gratis en compras mayores a $50</h3>
+            <h3>🎁 Envío Gratis en compras mayores a $150000</h3>
             <p>Disfruta de nuestros peluches con envío sin costo adicional</p>
           </div>
         </section>

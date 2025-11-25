@@ -317,6 +317,8 @@
   font-weight: normal;
 }
 
+
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -330,15 +332,15 @@
   border-left: 4px solid #8b5a2b;
 }
 
-.faq-item h3 {
-  color: #2c1a1d;
+.faq-section .faq-item h3 {
+  color: #2c1a1d !important;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
-.faq-item p {
-  color: #666;
+.faq-section .faq-item p {
+  color: #666 !important;
   line-height: 1.6;
   margin: 0;
   font-size: 0.95rem;

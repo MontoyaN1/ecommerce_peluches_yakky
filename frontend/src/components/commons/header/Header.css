@@ -16,13 +16,24 @@
   margin: 0 auto;
 }
 
-.logo h1 {
-  color: #e8d5b7; /* Beige elegante */
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-image a{
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  color: #e8d5b7;
   font-size: 1.8rem;
-  margin: 0;
   font-family: 'Georgia', serif;
   font-weight: normal;
-  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .nav-list {

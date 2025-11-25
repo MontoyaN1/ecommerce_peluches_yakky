@@ -1,29 +1,23 @@
-import React from 'react';
 import './ProductFilters.css';
 
 const ProductFilters = ({ filters, setFilters }) => {
   const categories = [
-    'Animales del Bosque',
-    'Criaturas Mágicas',
-    'Aves',
-    'Marinos',
-    'Personalizados'
+    'Navidad',
   ];
 
   const materials = [
-    'Algodón Orgánico',
-    'Lana Merino',
-    'Lino',
-    'Madera de Cerezo',
-    'Madera de Nogal',
-    'Mezclas Especiales'
+    'Peluche',
+    'Lana',
+    'Tela',
+    'Vidrio',
+    'Madera',
   ];
 
   const priceRanges = [
-    { label: 'Menos de $30', value: '0-30' },
-    { label: '$30 - $60', value: '30-60' },
-    { label: '$60 - $100', value: '60-100' },
-    { label: 'Más de $100', value: '100+' }
+    { label: 'Menos o igual de $30000', value: '0-30000' },
+    { label: '$30000 - $60000', value: '30000-60000' },
+    { label: '$60000 - $100000', value: '60000-100000' },
+    { label: 'Más de $100000', value: '100000+' }
   ];
 
   const handleFilterChange = (filterType, value) => {
@@ -45,7 +39,7 @@ const ProductFilters = ({ filters, setFilters }) => {
     <div className="product-filters">
       <div className="filters-header">
         <h3>Filtrar Productos</h3>
-        <button 
+        <button
           className="clear-filters-btn"
           onClick={clearFilters}
         >

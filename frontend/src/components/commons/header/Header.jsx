@@ -9,7 +9,8 @@ const Header = () => {
             <div className="container">
                 {/* Logo */}
                 <div className="logo">
-                    <h1>🦄 Peluches Mágicos</h1>
+                    <a href="/"><img src="/icon.png" alt="Peluches Yakky" className="logo-image" />
+                        <span className="logo-text">Peluches Yakky</span></a>
                 </div>
 
                 {/* Navegación */}

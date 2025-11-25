@@ -1,36 +1,8 @@
 import './ProductGrid.css';
+import { products } from '../../data/ProductData';
 
 // Datos de ejemplo - luego vendrán de una API
-const products = [
-  {
-    id: 1,
-    name: "Peluche León Majestuoso",
-    price: 29.99,
-    image: "🦁",
-    category: "Animales"
-  },
-  {
-    id: 2,
-    name: "Unicornio Arcoíris",
-    price: 34.99,
-    image: "🦄",
-    category: "Fantasía"
-  },
-  {
-    id: 3,
-    name: "Osito Panda Tierno",
-    price: 24.99,
-    image: "🐼",
-    category: "Animales"
-  },
-  {
-    id: 4,
-    name: "Dragón Mágico",
-    price: 39.99,
-    image: "🐲",
-    category: "Fantasía"
-  }
-];
+
 
 const ProductGrid = () => {
   return (
@@ -38,7 +10,7 @@ const ProductGrid = () => {
       {products.map(product => (
         <div key={product.id} className="product-card">
           <div className="product-image">
-            {product.image}
+            <img src={product.image} alt="Peluches Yakky" className="placeholder-image" />
           </div>
           <div className="product-info">
             <h3>{product.name}</h3>

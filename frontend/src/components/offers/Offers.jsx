@@ -25,15 +25,7 @@ const Offers = () => {
         </section>
 
         <div className="container">
-          {/* Banner de oferta destacada */}
-          <div className="featured-offer">
-            <div className="offer-content">
-              <h2>Oferta de la Semana</h2>
-              <h3>Colección Invierno - 30% OFF</h3>
-              <p>Hasta agotar existencias</p>
-              <button className="btn-primary">Ver Colección</button>
-            </div>
-          </div>
+          
 
           {/* Grid de productos en oferta */}
           <section className="offers-section">
