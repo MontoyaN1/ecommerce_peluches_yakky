@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Header from '../commons/header/Header';
 import Footer from '../commons/footer/Footer';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import './Contact.css';
+import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
@@ -14,6 +15,9 @@ const Contact = () => {
         message: ''
     });
 
+    const [isLoading, setIsLoading] = useState(false);
+    const [alert, setAlert] = useState({ show: false, type: '', message: '' });
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -21,23 +25,92 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const showAlert = (type, message) => {
+        setAlert({ show: true, type, message });
+        setTimeout(() => setAlert({ show: false, type: '', message: '' }), 5000);
+    };
+
+    const getEmailJSConfig = () => {
+        const config = {
+            serviceId: import.meta.env.VITE_SERVICE_ID,
+            templateId: import.meta.env.VITE_TEMPLATE_ID,
+            publicKey: import.meta.env.VITE_PUBLIC_KEY
+        };
+
+        // Validar que todas las variables existan
+        const missingVars = Object.entries(config)
+            .filter(([key, value]) => !value)
+            .map(([key]) => key);
+
+        if (missingVars.length > 0) {
+            console.error('Variables de entorno faltantes:', missingVars);
+            return null;
+        }
+
+        return config;
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Aquí iría la lógica para enviar el formulario
-        console.log('Formulario enviado:', formData);
-        alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            subject: '',
-            message: ''
+
+        const config = getEmailJSConfig();
+        if (!config) {
+            showAlert('error', 'Error de configuración. Contacta al administrador.');
+            return;
+        }
+
+        console.log('Datos a enviar:', {
+            subject: formData.subject,
+            fullSubject: `Contacto Peluches Yakky: ${formData.subject}`
         });
+
+
+
+        setIsLoading(true);
+
+        try {
+            const result = await emailjs.send(
+                config.serviceId,
+                config.templateId,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    phone: formData.phone,
+                    subject: formData.subject,
+                    message: formData.message,
+
+                },
+                config.publicKey
+            );
+
+            if (result.text === 'OK') {
+                showAlert('success', '¡Mensaje enviado! Te contactaremos pronto.');
+                // Limpiar formulario
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    subject: '',
+                    message: ''
+                });
+            }
+        } catch (error) {
+            console.error('Error enviando email:', error);
+            showAlert('error', 'Error al enviar el mensaje. Intenta nuevamente.');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
         <div className="contact-page">
             <Header />
+
+            {alert.show && (
+                <div className={`alert ${alert.type}`}>
+                    {alert.message}
+                </div>
+            )}
 
             <main className="contact-main">
                 {/* Hero Section */}
@@ -184,11 +257,11 @@ const Contact = () => {
                                                 required
                                             >
                                                 <option value="">Selecciona un asunto</option>
-                                                <option value="consulta">Consulta General</option>
-                                                <option value="pedido">Pedido Especial</option>
-                                                <option value="personalizado">Peluche Personalizado</option>
-                                                <option value="problema">Problema con Pedido</option>
-                                                <option value="otros">Otros</option>
+                                                <option value="Consulta General">Consulta General</option>
+                                                <option value="Pedido Especial">Pedido Especial</option>
+                                                <option value="Peluche Personalizado">Peluche Personalizado</option>
+                                                <option value="Problema con Pedido">Problema con Pedido</option>
+                                                <option value="Otros">Otros</option>
                                             </select>
                                         </div>
                                     </div>
@@ -206,13 +279,17 @@ const Contact = () => {
                                         ></textarea>
                                     </div>
 
-                                    <button type="submit" className="btn-primary">
-                                        Enviar Mensaje
+                                    <button
+                                        type="submit"
+                                        className="btn-primary"
+                                        disabled={isLoading}
+                                    >
+                                        {isLoading ? 'Enviando...' : 'Enviar Mensaje'}
                                     </button>
                                 </form>
                             </div>
 
-                            
+
                         </div>
                     </div>
                 </div>
